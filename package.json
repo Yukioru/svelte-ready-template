@@ -32,6 +32,8 @@
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.4.0",
     "standard-version": "^9.3.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0",
     "svelte": "^3.42.4",
     "vite": "^2.5.6"
   },
