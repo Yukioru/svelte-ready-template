@@ -2,11 +2,11 @@
 
 ## Set-up:
 
-- Vite
-- ESLint
-- Prettier
-- Husky
-- commitlint conventional
+- [Vite](https://vitejs.dev/) — Native ESM fast build tool
+- [ESLint](https://eslint.org/) — JS code linter with [airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) config
+- [Prettier](https://prettier.io/) — Code formatter. Configured with svelte & eslint support
+- [Husky](https://github.com/typicode/husky) — Git hooks manager
+- [commitlint](https://commitlint.js.org/) — Configuration-based commit linter with [config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
 
 ## How to run
 
