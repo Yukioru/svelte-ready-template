@@ -6,7 +6,7 @@
 - [ESLint](https://eslint.org/) — JS code linter with [airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) config
 - [Prettier](https://prettier.io/) — Code formatter. Configured with svelte & eslint support
 - [Husky](https://github.com/typicode/husky) — Git hooks manager
-- [commitlint](https://commitlint.js.org/) — Configuration-based commit linter with [config-conventional](https://github.com/conventional-changelog/commitlint/tree/master/@commitlint/config-conventional)
+- [commitlint](https://commitlint.js.org/) — Configuration-based commit linter with [Conventional Commits](https://www.conventionalcommits.org/) specification
 
 ## How to run
 
