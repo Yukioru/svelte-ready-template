@@ -8,14 +8,14 @@
     "serve": "vite preview",
     "format": "prettier --write --plugin-search-dir=. '{public,src}/**/*.{css,html,js,svelte}'",
     "lint": "eslint --fix --quiet src --ext .js,.svelte",
+    "lint:css": "stylelint --fix --quiet **/*.{css,html,svelte,svg}",
     "prepare": "husky install",
     "release": "standard-version"
   },
   "lint-staged": {
-    "*.{js,svelte,css}": [
-      "npm run lint",
-      "npm run format"
-    ]
+    "*.{svelte,js}": "npm run lint",
+    "*.{svelte,js,css}": "npm run format",
+    "*.{svelte,css}": "npm run lint:css"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
