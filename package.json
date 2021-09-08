@@ -9,7 +9,8 @@
     "format": "prettier --write --plugin-search-dir=. '{public,src}/**/*.{css,html,js,svelte}'",
     "lint": "eslint --fix --quiet src --ext .js,.svelte",
     "commit": "commitlint --edit \"$1\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-version"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -24,6 +25,7 @@
     "husky": "^7.0.2",
     "prettier": "^2.3.2",
     "prettier-plugin-svelte": "^2.4.0",
+    "standard-version": "^9.3.1",
     "svelte": "^3.42.4",
     "vite": "^2.5.6"
   },
