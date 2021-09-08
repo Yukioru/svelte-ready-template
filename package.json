@@ -1,0 +1,34 @@
+{
+  "name": "svelte-admin",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "format": "prettier --write --plugin-search-dir=. '{public,src}/**/*.{css,html,js,svelte}'",
+    "lint": "eslint --fix --quiet src --ext .js,.svelte",
+    "commit": "commitlint --edit \"$1\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.22",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-svelte3": "^3.2.0",
+    "husky": "^7.0.2",
+    "prettier": "^2.3.2",
+    "prettier-plugin-svelte": "^2.4.0",
+    "svelte": "^3.42.4",
+    "vite": "^2.5.6"
+  },
+  "peerDependencies": {
+    "@sveltejs/vite-plugin-svelte": "1.x",
+    "vite": "2.5.x"
+  }
+}
