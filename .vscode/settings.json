@@ -6,5 +6,25 @@
   "eslint.probe": ["javascript", "typescript", "html", "markdown", "svelte"],
   "eslint.validate": ["javascript", "svelte"],
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint"]
+  "editor.codeActionsOnSave": ["source.formatDocument", "source.fixAll.eslint", "source.fixAll.stylelint"],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "files.associations": {
+    "*.svelte": "html"
+  },
+  "stylelint.validate": [
+    "css",
+    "html",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "source.css.styled",
+    "source.markdown.math",
+    "styled-css",
+    "svelte",
+    "xml",
+    "xsl"
+  ]
 }
