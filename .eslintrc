@@ -18,6 +18,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "semi": ["error"]
+    "semi": ["error"],
+    "comma-dangle": ["error", "always-multiline"]
   }
 }
