@@ -9,7 +9,6 @@
     "format": "prettier --write --plugin-search-dir=. '{public,src}/**/*.{css,html,js,svelte}'",
     "lint": "eslint --fix --quiet src --ext .js,.svelte",
     "lint:css": "stylelint --fix --quiet **/*.{css,html,svelte,svg}",
-    "prepare": "husky install",
     "release": "standard-version"
   },
   "simple-git-hooks": {
