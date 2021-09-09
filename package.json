@@ -6,9 +6,6 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "format": "prettier --check --plugin-search-dir=. '{public,src}/**/*.{css,html,js,svelte}'",
-    "lint": "eslint src --ext .js,.svelte",
-    "lint:css": "stylelint **/*.{css,html,svelte,svg}",
     "release": "standard-version"
   },
   "dependencies": {},
@@ -102,8 +99,8 @@
     "pre-commit": "npx --no-install lint-staged"
   },
   "lint-staged": {
-    "*.{svelte,js}": "npm run lint",
-    "*.{svelte,js,css}": "npm run format",
-    "*.{svelte,css}": "npm run lint:css"
+    "*.{svelte,js}": "eslint --quiet --ext .js,.svelte",
+    "*.{svelte,js,css}": "prettier --check --plugin-search-dir=.",
+    "*.{svelte,css}": "stylelint --quiet"
   }
 }
