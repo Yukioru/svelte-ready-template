@@ -11,15 +11,7 @@
     "lint:css": "stylelint --fix --quiet **/*.{css,html,svelte,svg}",
     "release": "standard-version"
   },
-  "simple-git-hooks": {
-    "commit-msg": "npx --no-install commitlint --edit \"$1\"",
-    "pre-commit": "npx --no-install lint-staged"
-  },
-  "lint-staged": {
-    "*.{svelte,js}": "npm run lint",
-    "*.{svelte,js,css}": "npm run format",
-    "*.{svelte,css}": "npm run lint:css"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
@@ -44,5 +36,74 @@
   "peerDependencies": {
     "@sveltejs/vite-plugin-svelte": "1.x",
     "vite": "2.5.x"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "extends": [
+      "airbnb-base",
+      "prettier"
+    ],
+    "plugins": [
+      "import",
+      "prettier",
+      "svelte3"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.svelte"
+        ],
+        "processor": "svelte3/svelte3"
+      }
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2019,
+      "sourceType": "module"
+    },
+    "rules": {
+      "semi": [
+        "error"
+      ],
+      "comma-dangle": [
+        "error",
+        "always-multiline"
+      ]
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "svelteSortOrder": "options-scripts-markup-styles",
+    "semi": true,
+    "trailingComma": "es5",
+    "plugins": [
+      "prettier-plugin-svelte"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx --no-install commitlint --edit \"$1\"",
+    "pre-commit": "npx --no-install lint-staged"
+  },
+  "lint-staged": {
+    "*.{svelte,js}": "npm run lint",
+    "*.{svelte,js,css}": "npm run format",
+    "*.{svelte,css}": "npm run lint:css"
   }
 }
